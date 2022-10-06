@@ -1,0 +1,66 @@
+{% extends 'layouts/base.html' %} <br />
+{% load static %} <br />
+
+{% block links %}
+<link rel="stylesheet" href="{% static '/styles/index_.css' %}" />
+{% endblock links %} <br />
+
+{% block mainblock %}
+
+<section id="section-2">
+  <div id="books-main">
+    <h3>Libros Destacados</h3>
+
+    <div class="books-flex">
+      <br />
+
+      {% for book in object_list %} <br />
+
+      <div class="book">
+        <a href="{% url 'book_details' book.pk %} " target="_blank" alt=""
+          ><img src="media/{{book.libro_img}}"
+        /></a>
+        <div class="info">
+          <h4>{{book.titulo}}</h4>
+          <p><b>Autor:</b> {{book.autor}}</p>
+          <p><b>Estado:</b> {{book.estado}}</p>
+          <p class="card-user"><b>Subido por: </b>{{book.usuario}}</p>
+        </div>
+      </div>
+
+      <br />
+      {% endfor %}
+      <br />
+    </div>
+  </div>
+</section>
+
+{% comment %}
+<div class="section-4">
+  <h2>Contactanos</h2>
+  <p>Dejanos tu mensaje o sugerencia:</p>
+
+  <div class="column">
+    <form action="/index.html">
+      <label for="fname">Nombre</label>
+      <input type="text" id="fname" name="firstname" placeholder="Tu nombre" />
+
+      <label for="country">Country</label>
+      <select id="country" name="country">
+        <option value="india">Colombia</option>
+        <option value="australia">Argentina</option>
+        <option value="canada">Chile</option>
+        <option value="usa">USA</option>
+        <option value="usa">Otro</option>
+      </select>
+      <label for="subject">Mensaje</label>
+      <textarea
+        id="subject"
+        name="subject"
+        placeholder="Escribe algo"
+      ></textarea>
+      <input type="submit" value="Enviar" />
+    </form>
+  </div>
+</div>
+{% endcomment %} {% endblock mainblock %}
