@@ -53,15 +53,15 @@ class ProfileForm(forms.ModelForm):
     profile_pic = forms.ImageField(
         label='Foto de perfil', widget=forms.FileInput())
     departamento = forms.CharField(
-        max_length=100, label='Departamento', widget=forms.TextInput())
+        max_length=50, label='Departamento', widget=forms.TextInput())
     direccion = forms.CharField(
-        max_length=100, label='Dirección', widget=forms.TextInput())
+        max_length=50, label='Dirección', widget=forms.TextInput())
     telefono = forms.CharField(
-        max_length=100, label='Teléfono', widget=forms.TextInput())
+        max_length=10, label='Teléfono', widget=forms.TextInput())
     whatsapp = forms.CharField(
-        max_length=100, label='WhatsApp', widget=forms.TextInput())
+        max_length=10, label='WhatsApp', widget=forms.TextInput())
     facebook = forms.CharField(
-        max_length=100, label='Facebook', widget=forms.URLInput())
+        max_length=600, label='Facebook', widget=forms.URLInput())
 
     class Meta:
         model = Profile

@@ -27,7 +27,7 @@ for inten in intencion:
 class AddBookform(forms.ModelForm):
     model = Books
 
-    titulo = forms.CharField(max_length=150, required=True, label='',  widget=forms.TextInput(
+    titulo = forms.CharField(max_length=200, required=True, label='',  widget=forms.TextInput(
         attrs={'placeholder': 'Titulo', 'class': 'form-input'}),)
 
     editorial = forms.CharField(max_length=50, label='',  widget=forms.TextInput(
@@ -50,11 +50,11 @@ class AddBookform(forms.ModelForm):
     precio = forms.IntegerField(
         label='', widget=forms.NumberInput(attrs={'placeholder': 'Precio', 'class': 'form-input'}),)
 
-    autor = forms.CharField(max_length=100, label='', widget=forms.TextInput(
+    autor = forms.CharField(max_length=200, label='', widget=forms.TextInput(
         attrs={'placeholder': 'Autor', 'class': 'form-input'}), )
     libro_img = forms.ImageField(required=True)
 
-    reseña = forms.CharField(label='', widget=forms.Textarea(
+    reseña = forms.CharField(label='',max_length=2000, widget=forms.Textarea(
         attrs={'placeholder': 'Resumen o reseña corta...', 'class': 'form-input', 'style': 'resize:none;'}), )
 
     class Meta:
