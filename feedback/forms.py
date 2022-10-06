@@ -7,7 +7,7 @@ from .models import Comentario
 class ComentarioForm(forms.Form, ModelForm):
     nombre = forms.CharField(max_length=100, label='Nombre:', widget=forms.TextInput(attrs={'id': 'nombre' ,'placeholder': '', 'class': 'input-control'}), )
 
-    correo = forms.EmailField(max_length=50, label='Correo:', widget=forms.EmailInput(attrs={'id': 'correo','placeholder': '', 'class': 'input-control'}), )
+    correo = forms.EmailField(max_length=150, label='Correo:', widget=forms.EmailInput(attrs={'id': 'correo','placeholder': '', 'class': 'input-control'}), )
 
     departamento = forms.CharField(max_length=100, label='Departamento:', widget=forms.TextInput(attrs={'id': 'departamento', 'placeholder': '', 'class': 'input-control'}), )
 
