@@ -20,16 +20,6 @@ ALLOWED_HOSTS = ['booksnewlife-production.up.railway.app', '127.0.0:1']
 # ALLOWED_HOSTS = []
 
 
-CKEDITOR_CONFIGS = {
-    'default': {
-        'toolbar': 'Custom',
-        'width': '50%',       # <--------- LIKE THIS
-        'toolbar_Custom': [
-            ['Bold', 'Italic', 'Underline'],
-            ['NumberedList', 'BulletedList', ]
-        ]
-    }
-}
 # Application definition
 
 INSTALLED_APPS = [
@@ -41,7 +31,6 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     'books',
     'miembros',
-    'ckeditor',
     'feedback',
 ]
 
