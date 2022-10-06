@@ -80,15 +80,27 @@ WSGI_APPLICATION = "books_new_life.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.mysql",
-        "NAME": "books_new_life",
-        "USER": 'root',
-        'PASSWORD': '123456789',
-        'HOST': 'localhost',
-        'PORT': ''
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.mysql",
+#         "NAME": "books_new_life",
+#         "USER": 'root',
+#         'PASSWORD': '123456789',
+#         'HOST': 'localhost',
+#         'PORT': ''
 
+#     }
+# }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'railway',
+        'USER': 'root',
+        'PASSWORD': 'DH0WdmP0nMB1ZlM1HsIf',
+        'HOST': 'containers-us-west-30.railway.app',
+        'PORT': '6745',
+        
     }
 }
 
