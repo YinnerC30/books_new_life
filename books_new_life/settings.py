@@ -15,19 +15,13 @@ SECRET_KEY = "django-insecure-l*0m^l$$-al(4q)4@f7viykph)l51ep+xyrs+btjpuov5(j^fb
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+CSRF_TRUSTED_ORIGINS = ['https://booksnewlife-production.up.railway.app']
+ALLOWED_HOSTS = ['booksnewlife-production.up.railway.app', '127.0.0:1']
 
 
-CKEDITOR_CONFIGS = {
-    'default': {
-        'toolbar': 'Custom',
-        'width': '50%',       # <--------- LIKE THIS
-        'toolbar_Custom': [
-            ['Bold', 'Italic', 'Underline'],
-            ['NumberedList', 'BulletedList', ]
-        ]
-    }
-}
+# ALLOWED_HOSTS = []
+
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -39,7 +33,6 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     'books',
     'miembros',
-    'ckeditor',
     'feedback',
 ]
 
@@ -60,7 +53,7 @@ ROOT_URLCONF = "books_new_life.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": ['templates'],
+        "DIRS": [os.path.join(BASE_DIR, 'templates')],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -94,15 +87,28 @@ WSGI_APPLICATION = "books_new_life.wsgi.application"
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'railway',
-        'USER': 'root',
-        'PASSWORD': 'DH0WdmP0nMB1ZlM1HsIf',
-        'HOST': 'containers-us-west-30.railway.app',
-        'PORT': '6745',
+        'USER': 'postgres',
+        'PASSWORD': 'LfpXlgydG8RHDUeSh0eg',
+        'HOST': 'containers-us-west-51.railway.app',
+        'PORT': '7243',
         
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'railway',
+#         'USER': 'root',
+#         'PASSWORD': 'DH0WdmP0nMB1ZlM1HsIf',
+#         'HOST': 'containers-us-west-30.railway.app',
+#         'PORT': '6745',
+        
+#     }
+# }
+
 
 
 # Password validation
@@ -155,3 +161,4 @@ LOGIN_REDIRECT_URL = 'index'
 LOGOUT_REDIRECT_URL = 'index'
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
