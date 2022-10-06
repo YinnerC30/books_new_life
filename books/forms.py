@@ -54,6 +54,9 @@ class AddBookform(forms.ModelForm):
         attrs={'placeholder': 'Autor', 'class': 'form-input'}), )
     libro_img = forms.ImageField(required=True)
 
+    reseña = forms.CharField(label='', widget=forms.Textarea(
+        attrs={'placeholder': 'Resumen o reseña corta...', 'class': 'form-input', 'style': 'resize:none;'}), )
+
     class Meta:
         model = Books
         fields = ('titulo', 'editorial', 'categoria', 'cantidad',

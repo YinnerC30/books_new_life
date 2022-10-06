@@ -1,6 +1,6 @@
 .box-list {
   margin-bottom: 20px;
-  float: left;
+
   width: 100%;
   border-top: 0;
   border: 1px solid #ccc;
@@ -82,22 +82,6 @@ div {
   flex-wrap: wrap;
   max-width: 70%;
   margin: 0 auto;
-}
-
-.card-user {
-  bottom: 0;
-  margin-top: auto;
-}
-
-#portadas {
-  width: 100%;
-  margin: 0;
-  border: none;
-}
-
-.borde {
-  width: auto;
-  overflow: hidden;
 }
 
 .book {

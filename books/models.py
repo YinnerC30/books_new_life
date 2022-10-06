@@ -1,9 +1,9 @@
 from audioop import reverse
+from email.policy import default
 from django.db import models
 from django.contrib.auth.models import User
 from django.urls import reverse
 from datetime import date, datetime
-from ckeditor.fields import RichTextField
 
 
 class Books(models.Model):
@@ -17,7 +17,7 @@ class Books(models.Model):
     precio = models.IntegerField(null=True)
     estado = models.CharField(max_length=15)
     autor = models.CharField(max_length=200)
-    reseña = RichTextField(blank=True, null=True)
+    reseña = models.TextField(default='')
     libro_img = models.ImageField(null=True, blank=True, upload_to="images/")
     fecha = models.DateTimeField(auto_now_add=True)
     likes = models.ManyToManyField(User, related_name='book_post')

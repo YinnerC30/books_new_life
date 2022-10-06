@@ -11,6 +11,10 @@
 
 {% block mainblock %} <br />
 
+
+
+
+{% if category_books %}
 <div class="box-list">
   <h5>Categorias:</h5>
   <ul>
@@ -21,9 +25,6 @@
       
   </ul>
 </div>
-
-{% if category_books %}
-
 <div class="contenido">
 <h2 class="deal"><span>{{cat|title}}</span></h2>
 <div class="books-flex"> 
