@@ -1,1 +1,1 @@
-web: gunicorn 'books_new_life.wsgi'
+web: gunicorn books_new_life.wsgi
