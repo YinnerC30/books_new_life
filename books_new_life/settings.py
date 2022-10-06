@@ -84,17 +84,30 @@ WSGI_APPLICATION = "books_new_life.wsgi.application"
 #     }
 # }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'railway',
+#         'USER': 'postgres',
+#         'PASSWORD': 'LfpXlgydG8RHDUeSh0eg',
+#         'HOST': 'containers-us-west-51.railway.app',
+#         'PORT': '7243',
+        
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD': 'LfpXlgydG8RHDUeSh0eg',
-        'HOST': 'containers-us-west-51.railway.app',
-        'PORT': '7243',
+        'USER': 'root',
+        'PASSWORD': 'DH0WdmP0nMB1ZlM1HsIf',
+        'HOST': 'containers-us-west-30.railway.app',
+        'PORT': '6745',
         
     }
 }
+
 
 
 # Password validation
