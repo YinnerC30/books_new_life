@@ -55,7 +55,11 @@
       <li><b>Autor:</b> {{object.autor}}</li>
       <li><b>Editorial:</b> {{object.editorial}}</li>
       <li><b>Intención:</b> {{object.intencion}}</li>
+      
+      {% if object.cantidad < '1' %}
       <li><b>Cantidad:</b> {{object.cantidad}}</li>
+      {% endif %}
+
       {% if object.intencion == 'Vender' %}
       <li><b>Precio:</b> {{object.precio}}</li>
       {% endif %}
