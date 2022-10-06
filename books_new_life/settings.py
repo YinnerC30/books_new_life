@@ -17,7 +17,7 @@ DEBUG = True
 
 CSRF_TRUSTED_ORIGINS = ['https://booksnewlife-production.up.railway.app']
 # ALLOWED_HOSTS = ['booksnewlife-production.up.railway.app', '127.0.0:1']
-ALLOWED_HOSTS = ['booksnewlife-production.up.railway.app', '127.0.0:1']
+# ALLOWED_HOSTS = ['booksnewlife-production.up.railway.app', '127.0.0:1']
 # ALLOWED_HOSTS = []
 
 
@@ -84,29 +84,29 @@ WSGI_APPLICATION = "books_new_life.wsgi.application"
 #     }
 # }
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD': 'LfpXlgydG8RHDUeSh0eg',
-        'HOST': 'containers-us-west-51.railway.app',
-        'PORT': '7243',
-        
-    }
-}
-
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
+#         'ENGINE': 'django.db.backends.postgresql',
 #         'NAME': 'railway',
-#         'USER': 'root',
-#         'PASSWORD': 'DH0WdmP0nMB1ZlM1HsIf',
-#         'HOST': 'containers-us-west-30.railway.app',
-#         'PORT': '6745',
+#         'USER': 'postgres',
+#         'PASSWORD': 'LfpXlgydG8RHDUeSh0eg',
+#         'HOST': 'containers-us-west-51.railway.app',
+#         'PORT': '7243',
         
 #     }
 # }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'railway',
+        'USER': 'root',
+        'PASSWORD': 'DH0WdmP0nMB1ZlM1HsIf',
+        'HOST': 'containers-us-west-30.railway.app',
+        'PORT': '6745',
+        
+    }
+}
 
 
 
