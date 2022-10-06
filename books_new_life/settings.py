@@ -15,7 +15,7 @@ SECRET_KEY = "django-insecure-l*0m^l$$-al(4q)4@f7viykph)l51ep+xyrs+btjpuov5(j^fb
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['booksnewlife-production.up.railway.app', '127.0.0:1']
 
 
 CKEDITOR_CONFIGS = {
